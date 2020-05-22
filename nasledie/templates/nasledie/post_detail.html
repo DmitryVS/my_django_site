@@ -18,26 +18,22 @@
 </a></li></ul></div>
  </header>
  <div class="content">
- <h1>Все статьи</h1>
+ <h1>Детальная статьи</h1>
  </div>
 <div class="content container">
  <div class="row">
  <div class="col-md-8">
 
-{% for block in blocks %}
-<h2 class="title">Тема: {{ block.name }}</h2>
-	{% for post in posts %}
-		{% if block.name == post.block %}
+<h2 class="title">Тема: {{ post.block }}</h2>
+
  <div class="post">
  <div class="date">
  <p>Создано: {{ post.created_date }}</p>
  </div>
- <h3><a href="block/{{post.id}}">{{ post.title }}</a></h3>
+ <h3>{{ post.title }}</h3>
  <p>{{ post.text|linebreaksbr }}</p>
  </div>
-		{% endif %}
- 	{% endfor %}
-{% endfor %}
+
  </div>
  </div>
 </div>

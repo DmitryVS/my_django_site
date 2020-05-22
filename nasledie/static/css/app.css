@@ -12,14 +12,35 @@ a:visited, .page-header h1 a:active {
 .content {
  margin-left: 40px;
 }
+ h2 {
+	margin-top: -3px;
+	border-top: 1px solid lightgrey
+}
+.post > p {
+	text-overflow: ellipsis;
+    width: 700px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+h1 {
+	margin-bottom: 60px;
+}
+.post .date p {
+	margin-bottom: 3px;
+}
 h1, h2, h3, h4 {
  font-family: 'Lobster', cursive;
 }
 .date {
  color: #828282;
+ margin-left: -10px;
 }
 .save {
  float: right;
+}
+.post > h3 {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .post-form textarea, .post-form input {
  width: 100%;
@@ -31,8 +52,98 @@ h1, h2, h3, h4 {
  margin-right: 20px;
 }
 .post {
- margin-bottom: 70px;
+ margin-bottom: 30px;
+ margin-left: 40px;
 }
 .post h1 a, .post h1 a:visited {
  color: #000000;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;	
+}
+body{
+	margin-top: 140px;
+}
+header{
+	background: #1D4AB1;
+	height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.content {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+header > .content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+} 
+header > .content > ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	list-style-type: none;
+} 
+ 
+.nav li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 39px;
+}
+ .nav a {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.nav a:after {
+      transition: all 280ms ease-in-out;
+      content: "";
+      position: absolute;
+      width: 100%;
+      border: 1px solid #FFFFFF;
+      left: 0;
+      opacity: 0;
+      bottom: 0;
+  }
+.nav a:before{
+      transition: all 280ms ease-in-out;
+      content: "";
+      position: absolute;
+      width: 20%;
+      left: 0;
+      opacity: 0;
+      top: 0;
+      border: 1px solid #FFFFFF;
+}
+
+.nav a:hover:before {
+            left: 80%;
+            opacity: 1;
+        }
+.nav a:hover:after {
+            opacity: 1;
+}
+header a{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-decoration: none;
+    padding: 20px;	
+}
+header a span {
+	font-family: Georgia;
+	font-size: 50px;
 }

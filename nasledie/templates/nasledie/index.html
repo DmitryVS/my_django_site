@@ -1,7 +1,7 @@
 {% load static %}
 <html>
  <head>
- <title>Прикладное ПО 1</title>
+ <title>Главная</title>
  <link rel="stylesheet" href="{% static 'css/app.css'%}">
 
  </head>
@@ -18,28 +18,56 @@
 </a></li></ul></div>
  </header>
  <div class="content">
- <h1>Все статьи</h1>
+ <h1>Энциклопедия текста рыбы</h1>
  </div>
 <div class="content container">
- <div class="row">
- <div class="col-md-8">
+ 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<h2>Темы</h2>
 
 {% for block in blocks %}
-<h2 class="title">Тема: {{ block.name }}</h2>
-	{% for post in posts %}
-		{% if block.name == post.block %}
- <div class="post">
- <div class="date">
- <p>Создано: {{ post.created_date }}</p>
- </div>
- <h3><a href="block/{{post.id}}">{{ post.title }}</a></h3>
- <p>{{ post.text|linebreaksbr }}</p>
- </div>
-		{% endif %}
- 	{% endfor %}
+<h3 class="title">Тема: {{ block.name }}</h3>
+
 {% endfor %}
- </div>
- </div>
+
 </div>
 
  </body>
